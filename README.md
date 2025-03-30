@@ -30,6 +30,14 @@
 
 <br>
 
+# ANNOUNCEMENT UPDATE
+**LAYER4**
+[•] METHOD SAMP | FOR SAMP SERVER
+**LAYER7**
+[•] NULL
+
+<br>
+
 # Owner Code
 📌**Credits:** https://github.com/GadaLuBau1337
 
