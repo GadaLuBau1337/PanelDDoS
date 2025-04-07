@@ -24,18 +24,21 @@
 # Ideas
 1. `Method:  UDP | UDP FLOOD` 
 2. `Method:  TLS | BYPASS CLOUDDLARE UAM` 
-3. `Method:  METHOD IS UPDATE`
-8. **Send attacks with Panel** 
-9. **Optimize malicious code**
+3. `Method:  TCP | TCP FLOOD`
+4. `Method: FLOOD | FLOOD WEBSITE`
+5. `Method: UPDATE METHOD IS SOON`
+6. **Send attacks with Panel** 
+7. **Optimize malicious code**
 
 <br>
 
 # ANNOUNCEMENT UPDATE
 **LAYER4**
 [•] METHOD SAMP | FOR SAMP SERVER
+[•] METHOD TCP | FOR PORT TCP AND FLOOD
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br>
 **LAYER7**
-[•] NULL
+[•] METHOD FLOOD | FLOOD FOR WEBSITE
 
 <br>
 
