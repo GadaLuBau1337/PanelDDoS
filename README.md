@@ -26,9 +26,11 @@
 2. `Method:  TLS | BYPASS CLOUDDLARE UAM` 
 3. `Method:  TCP | TCP FLOOD`
 4. `Method: FLOOD | FLOOD WEBSITE`
-5. `Method: UPDATE METHOD IS SOON`
-6. **Send attacks with Panel** 
-7. **Optimize malicious code**
+5. `Method: RAND | ....`
+6. `Method: RAW | ...`
+7. `Method: SOCKETS | ...`
+8. **Send attacks with Panel** 
+9. **Optimize malicious code**
 
 <br>
 
