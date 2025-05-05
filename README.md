@@ -43,6 +43,12 @@
 
 [•] METHOD FLOOD | FLOOD FOR WEBSITE [07/04/2025]
 
+[•] METHOD RAND | .... [05/05/2025]
+
+[•] METHOD RAW | .... [05/05/2025]
+
+[•] METHOD SOCKETS | ... [05/05/2025]
+
 <br>
 
 # Owner Code
